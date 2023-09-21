@@ -18,4 +18,10 @@ amplify-gradle-config.json
 amplifytools.xcconfig
 .secret-*
 **.sample
+## aws-secrets
+src/aws-exports.js
+## graphql auto-generated file
+src/graphql/*.js
+src/graphql/schema.json
+.graphqlconfig.yml
 #amplify-do-not-edit-end
