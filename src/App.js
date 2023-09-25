@@ -8,8 +8,7 @@ import { AppLayout, ContentLayout, Header } from "@cloudscape-design/components"
 import { Admin } from './component/Admin';
 import { Chat } from './component/Chat';
 import { Catalog } from './component/Catalog';
-import { NavigationBar } from './component/NavigationBar';
-import { Navigation } from './component/Navigation';
+import { Navigation, NavigationBar } from './component/Navigation';
 import { Profile } from './component/Profile';
 
 function App({ signOut, user }) {
