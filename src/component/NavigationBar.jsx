@@ -38,7 +38,7 @@ export function NavigationBar ({activeHref, setActiveHref}) {
     <TopNavigation
       identity={{
         href: "/",
-        title: "DNA GO",
+        title: "AWS reInvent Builders",
       }}
       utilities={[
         {
