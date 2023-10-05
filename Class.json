@@ -1,0 +1,725 @@
+{
+    "Class": [
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "1"
+            },
+            "courseId": {
+              "S": "1"
+            },
+            "name": {
+              "S": "Amazon ECS: CI/CD - AWS CodePipeline"
+            },
+            "url": {
+              "S": "https://d2xbndf6m96kr7.cloudfront.net/videos/1_1_Amazon+ECS_+CI_CD.mp4"
+            },
+            "author": {
+              "S": "Piyush Mattoo"
+            },
+            "class_flag": {
+              "N": "0"
+            },
+            "description": {
+              "S": "Amazon Elastic Container Service(ECS) is a fully managed container orchestration service that simplifies your deployment, management, and scaling of containerized applications. This video explains ECS CI/CD pipeline with AWS CodePipeline."
+            },
+            "image": {
+              "S": "https://d2xbndf6m96kr7.cloudfront.net/images/1_1_Amazon+ECS_+CI_CD.png"
+            },
+            "createdAt": {
+              "S": "replace_time"
+            },
+            "updatedAt": {
+              "S": "replace_time"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "2"
+            },
+            "courseId": {
+              "S": "1"
+            },
+            "name": {
+              "S": "Amazon ECS: Task and Task Definition Overview"
+            },
+            "url": {
+              "S": "https://d2xbndf6m96kr7.cloudfront.net/videos/1_2_Amazon+ECS_+Task+and+Task+Definition+Overview.mp4"
+            },
+            "author": {
+              "S": "Jooyoung Kim"
+            },
+            "class_flag": {
+              "N": "0"
+            },
+            "description": {
+              "S": "Amazon Elastic Container Service(ECS) is a fully managed container orchestration service that simplifies your deployment, management, and scaling of containerized applications. This video explains ECS task and task definition. Additionally, through the demo, explore the characteristics of an ECS task."
+            },
+            "image": {
+              "S": "https://d2xbndf6m96kr7.cloudfront.net/images/1_2_Amazon+ECS_+Task+and+Task+Definition+Overview.png"
+            },
+            "createdAt": {
+              "S": "replace_time"
+            },
+            "updatedAt": {
+              "S": "replace_time"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "3"
+            },
+            "courseId": {
+              "S": "1"
+            },
+            "name": {
+              "S": "Amazon ECS: Amazon CloudWatch Container Insights"
+            },
+            "url": {
+              "S": "https://d2xbndf6m96kr7.cloudfront.net/videos/1_3_Amazon+ECS_+Amazon+CloudWatch+Container+Insights.mp4"
+            },
+            "author": {
+              "S": "Arindam Chatterji"
+            },
+            "class_flag": {
+              "N": "10"
+            },
+            "description": {
+              "S": "Amazon Elastic Container Service(ECS) is a fully managed container orchestration service that simplifies your deployment, management, and scaling of containerized applications. This video covers Amazon CloudWatch Container Insights, which can collect, aggregate, and summarize metrics and logs from your containerized applications and microservices."
+            },
+            "image": {
+              "S": "https://d2xbndf6m96kr7.cloudfront.net/images/1_3_Amazon+ECS_+Amazon+CloudWatch+Container+Insights.png"
+            },
+            "createdAt": {
+              "S": "replace_time"
+            },
+            "updatedAt": {
+              "S": "replace_time"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "4"
+            },
+            "courseId": {
+              "S": "1"
+            },
+            "name": {
+              "S": "AWS Container Day - Introduction to EKS Workshop"
+            },
+            "url": {
+              "S": "https://d2xbndf6m96kr7.cloudfront.net/videos/1_4_AWS+Container+Day+-+Introduction+to+EKS+Workshop.mp4"
+            },
+            "author": {
+              "S": "Niall Thomson"
+            },
+            "class_flag": {
+              "N": "0"
+            },
+            "description": {
+              "S": "Missed the AWS Container Day 2019 in Barcelona? Learn more about the EKS workshop. It is a great introduction to learn how to deploy your first cluster to EKS."
+            },
+            "image": {
+              "S": "https://d2xbndf6m96kr7.cloudfront.net/images/1_4_AWS+Container+Day+-+Introduction+to+EKS+Workshop.png"
+            },
+            "createdAt": {
+              "S": "replace_time"
+            },
+            "updatedAt": {
+              "S": "replace_time"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "5"
+            },
+            "courseId": {
+              "S": "1"
+            },
+            "name": {
+              "S": "Amazon VPC Lattice - EKS"
+            },
+            "url": {
+              "S": "https://d2xbndf6m96kr7.cloudfront.net/videos/1_5_Amazon+VPC+Lattice+-+EKS.mp4"
+            },
+            "author": {
+              "S": "Tim Dormer"
+            },
+            "class_flag": {
+              "N": "10"
+            },
+            "description": {
+              "S": "Demonstration of EKS operation with VPC Lattice. Namespaces, Custom DNS and Custom Certs with EKS."
+            },
+            "image": {
+              "S": "https://d2xbndf6m96kr7.cloudfront.net/images/1_5_Amazon+VPC+Lattice+-+EKS.png"
+            },
+            "createdAt": {
+              "S": "replace_time"
+            },
+            "updatedAt": {
+              "S": "replace_time"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "6"
+            },
+            "courseId": {
+              "S": "1"
+            },
+            "name": {
+              "S": "Introduction to AWS Observability Accelerator for Amazon EKS"
+            },
+            "url": {
+              "S": "https://d2xbndf6m96kr7.cloudfront.net/videos/1_6_Introduction+to+AWS+Observability+Accelerator+for+Amazon+EKS.mp4"
+            },
+            "author": {
+              "S": "Amazon Web Services"
+            },
+            "class_flag": {
+              "N": "0"
+            },
+            "description": {
+              "S": "In this video, you'll get an introduction to AWS Observability Accelerator for Amazon Elastic Kubernetes Service (Amazon EKS). With this solution, you can easily deploy and configure an application-specific observability environment, use Terraform to create Amazon Managed Service for Prometheus and Amazon Managed Grafana resources, and conduct end-to-end monitoring of applications."
+            },
+            "image": {
+              "S": "https://d2xbndf6m96kr7.cloudfront.net/images/1_6_Introduction+to+AWS+Observability+Accelerator+for+Amazon+EKS.png"
+            },
+            "createdAt": {
+              "S": "replace_time"
+            },
+            "updatedAt": {
+              "S": "replace_time"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "7"
+            },
+            "courseId": {
+              "S": "2"
+            },
+            "name": {
+              "S": "Accelerate Modernization using AWS Proton and Refactor Spaces"
+            },
+            "url": {
+              "S": "https://d2xbndf6m96kr7.cloudfront.net/videos/2_1_Accelerate+Modernization+using+AWS+Proton+and+Refactor+Spaces.mp4"
+            },
+            "author": {
+              "S": "Amazon Web Services"
+            },
+            "class_flag": {
+              "N": "0"
+            },
+            "description": {
+              "S": "In this video, you’ll see how to accelerate modernization using AWS Proton and Refactor Spaces. With this solution, you can simplify the creation of refactoring environments, helping teams create a scalable platform that provides self-service capabilities to developers."
+            },
+            "image": {
+              "S": "https://d2xbndf6m96kr7.cloudfront.net/images/2_1_Accelerate+Modernization+using+AWS+Proton+and+Refactor+Spaces.png"
+            },
+            "createdAt": {
+              "S": "replace_time"
+            },
+            "updatedAt": {
+              "S": "replace_time"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "8"
+            },
+            "courseId": {
+              "S": "2"
+            },
+            "name": {
+              "S": "Using a new project wizard to determine the migration target in AWS SCT"
+            },
+            "url": {
+              "S": "https://d2xbndf6m96kr7.cloudfront.net/videos/2_2_Using+a+new+project+wizard+to+determine+the+migration+target+in+AWS+SCT.mp4"
+            },
+            "author": {
+              "S": "Amazon Web Services"
+            },
+            "class_flag": {
+              "N": "0"
+            },
+            "description": {
+              "S": "This video shows how to use the new project wizard in the AWS Schema Conversion Tool (AWS SCT). This wizard estimates how complex a migration might be for all supported target destinations and assists you in determining your migration target. The wizard also produces a summary report for the migration of your database to different target destinations. You can use this report to compare possible target destinations and choose the optimal migration path."
+            },
+            "image": {
+              "S": "https://d2xbndf6m96kr7.cloudfront.net/images/2_2_Using+a+new+project+wizard+to+determine+the+migration+target+in+AWS+SCT.png"
+            },
+            "createdAt": {
+              "S": "replace_time"
+            },
+            "updatedAt": {
+              "S": "replace_time"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "9"
+            },
+            "courseId": {
+              "S": "2"
+            },
+            "name": {
+              "S": "Introduction to the DMS Schema Conversion"
+            },
+            "url": {
+              "S": "https://d2xbndf6m96kr7.cloudfront.net/videos/2_3_Introduction+to+the+DMS+Schema+Conversion.mp4"
+            },
+            "author": {
+              "S": "Amazon Web Services"
+            },
+            "class_flag": {
+              "N": "10"
+            },
+            "description": {
+              "S": "AWS introduces  the Schema Conversion feature of AWS Database Migration Service. You can use DMS Schema Conversion to assess migration complexity, convert database objects to a format compatible with your target database engine, and apply the converted code to your target database. Watch this video to get started with the DMS Schema Conversion."
+            },
+            "image": {
+              "S": "https://d2xbndf6m96kr7.cloudfront.net/images/2_3_Introduction+to+the+DMS+Schema+Conversion.png"
+            },
+            "createdAt": {
+              "S": "replace_time"
+            },
+            "updatedAt": {
+              "S": "replace_time"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "10"
+            },
+            "courseId": {
+              "S": "2"
+            },
+            "name": {
+              "S": "Enabling AWS Support with Atlassian Jira Service Management"
+            },
+            "url": {
+              "S": "https://d2xbndf6m96kr7.cloudfront.net/videos/2_4_Enabling+AWS+Support+with+Atlassian+Jira+Service+Management.mp4"
+            },
+            "author": {
+              "S": "Amazon Web Services"
+            },
+            "class_flag": {
+              "N": "0"
+            },
+            "description": {
+              "S": "In this video, you’ll see how to create and manage AWS support cases in Jira Service Management. With the AWS Service Management Connector for Jira Service Management, you can leverage the Jira incident management process throughout the AWS support case lifecycle and synchronize case-related communication between the two services."
+            },
+            "image": {
+              "S": "https://d2xbndf6m96kr7.cloudfront.net/images/2_4_Enabling+AWS+Support+with+Atlassian+Jira+Service+Management.png"
+            },
+            "createdAt": {
+              "S": "replace_time"
+            },
+            "updatedAt": {
+              "S": "replace_time"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "11"
+            },
+            "courseId": {
+              "S": "3"
+            },
+            "name": {
+              "S": "Bring Your Own Custom ML Models with Amazon SageMaker"
+            },
+            "url": {
+              "S": "https://d2xbndf6m96kr7.cloudfront.net/videos/3_1_Bring+Your+Own+Custom+ML+Models+with+Amazon+SageMaker.mp4"
+            },
+            "author": {
+              "S": "Amazon Web Services"
+            },
+            "class_flag": {
+              "N": "0"
+            },
+            "description": {
+              "S": "With Amazon SageMaker, you have the flexibility to bring in your own model and leverage the capabilities of the service. In this video, we will dive deep into how you can bring your own model into SageMaker."
+            },
+            "image": {
+              "S": "https://d2xbndf6m96kr7.cloudfront.net/images/3_1_Bring+Your+Own+Custom+ML+Models+with+Amazon+SageMaker.png"
+            },
+            "createdAt": {
+              "S": "replace_time"
+            },
+            "updatedAt": {
+              "S": "replace_time"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "12"
+            },
+            "courseId": {
+              "S": "3"
+            },
+            "name": {
+              "S": "Centrally track and manage your model versions in Amazon SageMaker"
+            },
+            "url": {
+              "S": "https://d2xbndf6m96kr7.cloudfront.net/videos/3_2_Centrally+track+and+manage+your+model+versions+in+Amazon+SageMaker.mp4"
+            },
+            "author": {
+              "S": "Amazon Web Services"
+            },
+            "class_flag": {
+              "N": "0"
+            },
+            "description": {
+              "S": "Building an ML application involves developing models, data pipelines, training pipelines, inference pipelines, and validation tests. With the Amazon SageMaker Model Registry, you can track model versions, their metadata such as use case grouping, and model performance metrics baselines in a central repository where it is easy to choose the right model for deployment based on your business requirements. Model Registry automatically logs the approval workflows for audit and compliance."
+            },
+            "image": {
+              "S": "https://d2xbndf6m96kr7.cloudfront.net/images/3_2_Centrally+track+and+manage+your+model+versions+in+Amazon+SageMaker.png"
+            },
+            "createdAt": {
+              "S": "replace_time"
+            },
+            "updatedAt": {
+              "S": "replace_time"
+            }
+          }
+        }
+      }
+      ,
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "13"
+            },
+            "courseId": {
+              "S": "3"
+            },
+            "name": {
+              "S": "Introducing Amazon Bedrock"
+            },
+            "url": {
+              "S": "https://d2xbndf6m96kr7.cloudfront.net/videos/3_3_Introducing+Amazon+Bedrock.mp4"
+            },
+            "author": {
+              "S": "Amazon Web Services"
+            },
+            "class_flag": {
+              "N": "10"
+            },
+            "description": {
+              "S": "Amazon Bedrock is a fully managed service that offers a choice of high-performing foundation models from leading AI companies, along with a broad set of capabilities to build generative AI applications, simplifying development while maintaining privacy and security. See how customers across industries are leveraging Amazon Bedrock to create new generative AI applications to accelerate productivity and drive innovation."
+            },
+            "image": {
+              "S": "https://d2xbndf6m96kr7.cloudfront.net/images/3_3_Introducing+Amazon+Bedrock.png"
+            },
+            "createdAt": {
+              "S": "replace_time"
+            },
+            "updatedAt": {
+              "S": "replace_time"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "14"
+            },
+            "courseId": {
+              "S": "3"
+            },
+            "name": {
+              "S": "Build ML models at scale with Amazon SageMaker Studio Notebooks"
+            },
+            "url": {
+              "S": "https://d2xbndf6m96kr7.cloudfront.net/videos/3_4_Build+ML+models+at+scale+with+Amazon+SageMaker+Studio+Notebooks.mp4"
+            },
+            "author": {
+              "S": "Amazon Web Services"
+            },
+            "class_flag": {
+              "N": "0"
+            },
+            "description": {
+              "S": "Amazon SageMaker Studio Notebooks are quick start, collaborative notebooks that integrate with purpose-built ML tools in SageMaker and other AWS services for your end-to-end ML development, from prepare data at peta-byte scale using Spark on Amazon EMR, train and debug models, track experiments, deploy and monitor models and manage pipelines – all in Amazon SageMaker Studio – a fully integrated development environment (IDE) for ML. Easily dial up or down compute resources without interrupting your work. Share notebooks easily with your team using a sharable link."
+            },
+            "image": {
+              "S": "https://d2xbndf6m96kr7.cloudfront.net/images/3_4_Build+ML+models+at+scale+with+Amazon+SageMaker+Studio+Notebooks.png"
+            },
+            "createdAt": {
+              "S": "replace_time"
+            },
+            "updatedAt": {
+              "S": "replace_time"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "15"
+            },
+            "courseId": {
+              "S": "4"
+            },
+            "name": {
+              "S": "How to use multiple DynamoDB tables with GraphQL"
+            },
+            "url": {
+              "S": "https://d2xbndf6m96kr7.cloudfront.net/videos/4_1_How+to+use+multiple+DynamoDB+tables+with+GraphQL.mp4"
+            },
+            "author": {
+              "S": "Alex DeBrie"
+            },
+            "class_flag": {
+              "N": "0"
+            },
+            "description": {
+              "S": "This video shows how to build a GraphQL application with multiple DynamoDB tables using AWS AppSync. Many DynamoDB data modeling patterns use a single table to hold multiple entities from your application; however, this single-table design pattern may not be desirable when using DynamoDB with GraphQL applications. In using multiple tables, we are able to create simpler, more focused GraphQL resolvers with more flexible querying."
+            },
+            "image": {
+              "S": "https://d2xbndf6m96kr7.cloudfront.net/images/4_1_How+to+use+multiple+DynamoDB+tables+with+GraphQL.png"
+            },
+            "createdAt": {
+              "S": "replace_time"
+            },
+            "updatedAt": {
+              "S": "replace_time"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "16"
+            },
+            "courseId": {
+              "S": "4"
+            },
+            "name": {
+              "S": "How to use single-table DynamoDB design with GraphQL"
+            },
+            "url": {
+              "S": "https://d2xbndf6m96kr7.cloudfront.net/videos/4_2_How+to+use+single-table+DynamoDB+design+with+GraphQL.mp4"
+            },
+            "author": {
+              "S": "Alex DeBrie"
+            },
+            "class_flag": {
+              "N": "10"
+            },
+            "description": {
+              "S": "This video shows how to use single-table DynamoDB design with GraphQL. Single-table is a DynamoDB pattern in which multiple entities for an application are combined into a single DynamoDB table. Using AWS AppSync, we set up a blog hosting application that contains Sites, Posts, and Comments in a single table. You will learn how to use “lookaheads” in your GraphQL resolvers to understand the nested relations that are requested in your queries. After watching this video, you will understand the tradeoffs of using single-table design in your GraphQL application."
+            },
+            "image": {
+              "S": "https://d2xbndf6m96kr7.cloudfront.net/images/4_2_How+to+use+single-table+DynamoDB+design+with+GraphQL.png"
+            },
+            "createdAt": {
+              "S": "replace_time"
+            },
+            "updatedAt": {
+              "S": "replace_time"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "17"
+            },
+            "courseId": {
+              "S": "4"
+            },
+            "name": {
+              "S": "Zero-Config Deploy of a Next.js 13 SSR App with AWS Amplify Hosting"
+            },
+            "url": {
+              "S": "https://d2xbndf6m96kr7.cloudfront.net/videos/4_3_Zero-Config+Deploy+of+a+Next.js+13+SSR+App+with+AWS+Amplify+Hosting.mp4"
+            },
+            "author": {
+              "S": "Mike Jerome"
+            },
+            "class_flag": {
+              "N": "0"
+            },
+            "description": {
+              "S": "This video walks through the process of deploying a Next.js 13 application with AWS Amplify Hosting. It highlights the zero-configuration onboarding experience of Amplify Hosting, where developers can easily connect their repository then simply click through a wizard to deploy their application."
+            },
+            "image": {
+              "S": "https://d2xbndf6m96kr7.cloudfront.net/images/4_3_Zero-Config+Deploy+of+a+Next.js+13+SSR+App+with+AWS+Amplify+Hosting.png"
+            },
+            "createdAt": {
+              "S": "replace_time"
+            },
+            "updatedAt": {
+              "S": "replace_time"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "18"
+            },
+            "courseId": {
+              "S": "4"
+            },
+            "name": {
+              "S": "Find Hardcoded Secrets Using the Amazon CodeGuru Reviewer Secrets Detector"
+            },
+            "url": {
+              "S": "https://d2xbndf6m96kr7.cloudfront.net/videos/4_4_Find+Hardcoded+Secrets+Using+the+Amazon+CodeGuru+Reviewer+Secrets+Detector.mp4"
+            },
+            "author": {
+              "S": "Amazon Web Services"
+            },
+            "class_flag": {
+              "N": "0"
+            },
+            "description": {
+              "S": "In this video, you’ll see how to find hardcoded secrets using the Amazon CodeGuru Reviewer secrets detector. With this tool, you can identify secrets in your application code, continually scan your repositories for new secrets, and secure any secrets you discover in AWS Secrets Manager."
+            },
+            "image": {
+              "S": "https://d2xbndf6m96kr7.cloudfront.net/images/4_4_Find+Hardcoded+Secrets+Using+the+Amazon+CodeGuru+Reviewer+Secrets+Detector.png"
+            },
+            "createdAt": {
+              "S": "replace_time"
+            },
+            "updatedAt": {
+              "S": "replace_time"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "19"
+            },
+            "courseId": {
+              "S": "4"
+            },
+            "name": {
+              "S": "Accelerate Python Coding with Amazon CodeWhisperer"
+            },
+            "url": {
+              "S": "https://d2xbndf6m96kr7.cloudfront.net/videos/4_5_Accelerate+Python+Coding+with+Amazon+CodeWhisperer.mp4"
+            },
+            "author": {
+              "S": "Amazon Web Services"
+            },
+            "class_flag": {
+              "N": "0"
+            },
+            "description": {
+              "S": "In this video, you’ll see how to accelerate Python coding with Amazon CodeWhisperer."
+            },
+            "image": {
+              "S": "https://d2xbndf6m96kr7.cloudfront.net/images/4_5_Accelerate+Python+Coding+with+Amazon+CodeWhisperer.png"
+            },
+            "createdAt": {
+              "S": "replace_time"
+            },
+            "updatedAt": {
+              "S": "replace_time"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "id": {
+              "S": "20"
+            },
+            "courseId": {
+              "S": "4"
+            },
+            "name": {
+              "S": "Start your software project fast with Amazon CodeCatalyst blueprints"
+            },
+            "url": {
+              "S": "https://d2xbndf6m96kr7.cloudfront.net/videos/4_6_Start+your+software+project+fast+with+Amazon+CodeCatalyst+blueprints.mp4"
+            },
+            "author": {
+              "S": "Amazon Web Services"
+            },
+            "class_flag": {
+              "N": "0"
+            },
+            "description": {
+              "S": "You can use Amazon CodeCatalyst blueprints to set up a new software project on AWS in minutes. Blueprints are used by CodeCatalyst to set up a code repository with a working sample app, define cloud infrastructure, and run pre-configured CI/CD workflows for your project. There are blueprints for different types of applications, and you can customize the deployment architecture and frameworks, infrastructure-as-code language, build steps, and AWS Regions you want to use. Watch this video to better understand how blueprints enable you to set up and customize a new software project in a complete software "
+            },
+            "image": {
+              "S": "https://d2xbndf6m96kr7.cloudfront.net/images/4_6_Start+your+software+project+fast+with+Amazon+CodeCatalyst+blueprints.png"
+            },
+            "createdAt": {
+              "S": "replace_time"
+            },
+            "updatedAt": {
+              "S": "replace_time"
+            }
+          }
+        }
+      } 
+    ]
+  }

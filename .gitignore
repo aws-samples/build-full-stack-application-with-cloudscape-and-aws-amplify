@@ -24,3 +24,5 @@ src/aws-exports.js
 src/graphql/schema.json
 .graphqlconfig.yml
 #amplify-do-not-edit-end
+#others
+.DS_Store
