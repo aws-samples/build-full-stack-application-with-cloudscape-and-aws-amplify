@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # CloudFormation 스택의 이름 설정
-stack_name="reinventAmplify2023"
+stack_name="base_cfn"
 
 # 스택 출력 값을 가져오기
 AccessKey=$(aws cloudformation describe-stacks --stack-name $stack_name --query "Stacks[0].Outputs[?OutputKey=='AccessKey'].OutputValue" --output text)
