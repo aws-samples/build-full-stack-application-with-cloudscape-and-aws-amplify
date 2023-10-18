@@ -194,7 +194,6 @@ class Videoplayer extends React.Component {
             className='react-player'
             url={this.props.videoUrl}
             width='100%'
-            height='100%'
             loop={true}
             playing={true}
             muted={true}
