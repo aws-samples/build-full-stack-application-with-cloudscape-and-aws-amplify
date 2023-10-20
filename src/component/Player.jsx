@@ -1,5 +1,5 @@
 // ui
-import React from "react";
+import React, { useState } from "react";
 import ReactPlayer from 'react-player/lazy';
 import {
   Box, Container, SpaceBetween,
@@ -21,6 +21,8 @@ import { format } from './Duration'
 import { Survey } from './Survey'
 
 export function Player(props) {
+  const [playtime, setPlaytime] = useState(0);
+
   return (
     <Container>
       <Box>
@@ -34,6 +36,19 @@ export function Player(props) {
           controls={true}
           light={false}
           pip={false}
+          onDuration={ (e) => {console.log(e)} }
+          onProgress={ (e) => {
+              var checkpoint = playtime + 10;
+              if (e.playedSeconds > checkpoint) {
+                console.log("checkpoint: " + e.playedSeconds);
+                updateRewardApi(props.user, props.classId, checkpoint);
+                setPlaytime(checkpoint);
+              }
+              console.log(e.playedSeconds);
+            }
+          }
+          onPause={ () => {console.log("playing false, paused")} }
+          onPlay={ () => {console.log("playing true")} }
         />
       </Box>
       <SpaceBetween direction="vertical" size="s">
@@ -51,9 +66,9 @@ export function Player(props) {
 // graphql apis
 function fetchProfilesApi(user) {
   try {
-    return API.graphql(graphqlOperation(listProfiles), {
+    return API.graphql(graphqlOperation(listProfiles, {
       filter: { userId: { eq: user }}
-    }).then(
+    })).then(
       result => {
         return result.data.listProfiles.items;
     });
@@ -85,12 +100,12 @@ function updateProfileRewardApi(id, _version, user, point = 10) {
 
 function fetchRewardsApi(user, classId) {
   try {
-    return API.graphql(graphqlOperation(listRewards), {
+    return API.graphql(graphqlOperation(listRewards, {
       filter: { and: {
         classId: { eq: classId },
         userId: { eq: user }
       }}
-    }).then(
+    })).then(
       result => {
         return result.data.listRewards.items;
     });
@@ -100,20 +115,11 @@ function fetchRewardsApi(user, classId) {
   }
 }
 
-function updateRewardApi(id, _version, user, classId, duration, played, point = 10) {
+function updateRewardApi(user, classId, played, duration = 0, point = 10) {
   try {
-    var result = fetchRewardsApi(user, classId);
-
-    if (result.data.listRewards.length > 0 && result.data.listRewards) {
-      API.graphql(graphqlOperation(updateReward, {
-        input: { id: id, _version: _version, userId: user, classId: classId, duration: duration, played: played, point: point }
-      }));
-    }
-    else {
-      API.graphql(graphqlOperation(createReward, {
-        input: { id: id, userId: user, classId: classId, duration: duration, played: played, point: point }
-      }));
-    }
+    API.graphql(graphqlOperation(createReward, {
+      input: { userId: user, classId: classId, duration: duration, played: played, point: point }
+    }));
   }
   catch (e) {
     console.log({e});
