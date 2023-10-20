@@ -1,5 +1,9 @@
+#!/bin/bash
+
+export AWS_REGION=us-east-1
+
 #Get the list of dynamodb tables from amplify cli
-table_name=$(aws dynamodb list-tables --query 'TableNames[0]')
+table_name=$(aws dynamodb list-tables --output text --region $AWS_REGION --query 'TableNames[0]')
 
 #Get the index from the dynamodb tables
 index_name=$(echo "${table_name}" | awk -F '-' '{print $2}')
@@ -18,11 +22,13 @@ echo "class_name: ${class_name}"
 current_time=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
 
 #Replace the table_name
-sed -i "s/Course/$course_name/g" Course.json
-sed -i "s/Class/$class_name/g" Class.json
-sed -i "s/replace_time/$current_time/g" Course.json
-sed -i "s/replace_time/$current_time/g" Class.json
+sed -i '' -e "s/Course/$course_name/g" Course.json
+sed -i '' -e "s/Class/$class_name/g" Class.json
+sed -i '' -e "s/replace_time/$current_time/g" Course.json
+sed -i '' -e "s/replace_time/$current_time/g" Class.json
 
 #Insert the data into tables
 aws dynamodb batch-write-item --request-items file://Course.json
 aws dynamodb batch-write-item --request-items file://Class.json
+
+unset AWS_REGION
