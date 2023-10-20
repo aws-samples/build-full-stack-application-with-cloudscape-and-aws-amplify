@@ -79,7 +79,7 @@ class Videoplayer extends React.Component {
     }));
 
     // 없으면 신규 작업
-    if (result.data.listRewards.items.length === 0) {
+    if (result.data.listRewards.items.length == 0) {
       await API.graphql(graphqlOperation(createReward, {
         input: {
           classId: this.classID,
@@ -98,7 +98,7 @@ class Videoplayer extends React.Component {
       var played_seconds = (+b[0]) * 60 + (+b[1])
       var lastedPlay_max = Math.max(lastedPlay_seconds,played_seconds)
 
-      if (result.data.listRewards.items[0]['point'] === 0) {
+      if (result.data.listRewards.items[0]['point'] == 0) {
         if (lastedPlay_max>=Math.floor(this.state.duration)) {
           await API.graphql(graphqlOperation(updateReward, {
             input: {
@@ -122,7 +122,7 @@ class Videoplayer extends React.Component {
             await API.graphql(graphqlOperation(createProfile, {
               input: {
                 userId: this.username,
-                point: '0'
+                point: 0
               }}
             ));
           }
