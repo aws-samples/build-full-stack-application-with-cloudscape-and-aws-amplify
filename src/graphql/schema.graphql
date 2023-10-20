@@ -36,8 +36,8 @@ type Reward @model @auth(rules: [{ allow: owner }]) {
   id: ID!
   classId: String!
   userId: String!
-  timeDuration: String
-  lastedPlay: String
+  duration: String
+  played: String
   point: String
 }
 
