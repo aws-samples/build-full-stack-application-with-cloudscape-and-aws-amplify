@@ -14,7 +14,7 @@ export const REWARDS_COLUMN_DEFINITIONS = [
   {
     id: 'event',
     header: 'Event',
-    cell: item => item.classId,
+    cell: item => item.id,
   },
   {
     id: 'point',
