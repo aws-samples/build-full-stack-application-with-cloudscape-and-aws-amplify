@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export AWS_REGION=us-east-1
+export AWS_REGION=us-west-2
 
 #Get the list of dynamodb tables from amplify cli
 table_name=$(aws dynamodb list-tables --output text --region $AWS_REGION --query 'TableNames[0]')
