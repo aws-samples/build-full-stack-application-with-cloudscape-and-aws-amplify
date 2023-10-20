@@ -1,20 +1,14 @@
 // ui
 import React, { useEffect, useState } from "react";
 import {
-  Box,
-  Cards,
-  Container,
-  Grid,
-  Header,
-  Link,
-  Pagination,
-  SpaceBetween,
-  StatusIndicator,
+  Box, Cards, Container,
+  Grid, Header, Link,
+  Pagination, SpaceBetween, StatusIndicator,
 } from "@cloudscape-design/components";
 
 // components
 import { Comments } from './Comments'
-import VideoPlayer from './VideoPlayer'
+import { Player } from './Player'
 
 // apis
 import { API, graphqlOperation } from 'aws-amplify'
@@ -153,7 +147,7 @@ const Class = ({
   return (
     <>
       <SpaceBetween size="l">
-        <VideoPlayer classId={activeClass.id} videoName={activeClass.name} videoDescription={activeClass.description} videoAuthor={activeClass.author} videoUrl={activeClass.url} userName={userName} />
+        <Player classId={activeClass.id} title={activeClass.name} desc={activeClass.description} author={activeClass.author} url={activeClass.url} user={userName} />
         <Comments classId={activeClass.id} />
       </SpaceBetween>
     </>
