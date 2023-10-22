@@ -36,13 +36,13 @@ type Reward @model @auth(rules: [{ allow: owner }]) {
   id: ID!
   classId: String!
   userId: String!
-  timeDuration: String
-  lastedPlay: String
+  completion: Boolean
+  played: String
   point: String
 }
 
 type Profile @model @auth(rules: [{ allow: owner }]) {
-  id: ID!
+  id: String! @primaryKey
   point: Int
   userId: String!
   name: String

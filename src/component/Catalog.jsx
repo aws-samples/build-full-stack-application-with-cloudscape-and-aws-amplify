@@ -1,20 +1,14 @@
 // ui
 import React, { useEffect, useState } from "react";
 import {
-  Box,
-  Cards,
-  Container,
-  Grid,
-  Header,
-  Link,
-  Pagination,
-  SpaceBetween,
-  StatusIndicator,
+  Box, Cards, Container,
+  Grid, Header, Link,
+  Pagination, SpaceBetween, StatusIndicator,
 } from "@cloudscape-design/components";
 
 // components
 import { Comments } from './Comments'
-import VideoPlayer from './VideoPlayer'
+import { Player } from './Player'
 
 // apis
 import { API, graphqlOperation } from 'aws-amplify'
@@ -43,7 +37,7 @@ export function Catalog(props) {
         </Container>
         {
           (activeClass && activeClass != null && activeClass.class_flag <= 0) ? (
-            <Class activeClass={activeClass} userName={props.user} />
+            <Class activeClass={activeClass} userName={props.user} userId={props.uid} />
           ) : (
             <ClassCatalog activeCourse={activeCourse} setActiveClass={setActiveClass} />
           )
@@ -149,11 +143,12 @@ const Class = ({
   description,
   videoUrl,
   userName,
+  userId,
 }) => {
   return (
     <>
       <SpaceBetween size="l">
-        <VideoPlayer classId={activeClass.id} videoName={activeClass.name} videoDescription={activeClass.description} videoAuthor={activeClass.author} videoUrl={activeClass.url} userName={userName} />
+        <Player classId={activeClass.id} title={activeClass.name} desc={activeClass.description} author={activeClass.author} url={activeClass.url} user={userName} uid={userId} />
         <Comments classId={activeClass.id} />
       </SpaceBetween>
     </>

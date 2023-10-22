@@ -27,7 +27,7 @@ function App({ signOut, user }) {
             {
               {
                 "#/community" : <Chat />,
-                "#/catalog" : <Catalog user={user.username} />,
+                "#/catalog" : <Catalog user={user.username} uid={user.attributes.sub} />,
                 "#/profile" : <Profile user={user.username} />,
                 "#/admin" : <Admin user={user.username} />,
               }[activeHref]
