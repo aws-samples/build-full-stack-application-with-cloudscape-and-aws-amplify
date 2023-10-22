@@ -37,7 +37,7 @@ export function Catalog(props) {
         </Container>
         {
           (activeClass && activeClass != null && activeClass.class_flag <= 0) ? (
-            <Class activeClass={activeClass} userName={props.user} />
+            <Class activeClass={activeClass} userName={props.user} userId={props.uid} />
           ) : (
             <ClassCatalog activeCourse={activeCourse} setActiveClass={setActiveClass} />
           )
@@ -143,11 +143,12 @@ const Class = ({
   description,
   videoUrl,
   userName,
+  userId,
 }) => {
   return (
     <>
       <SpaceBetween size="l">
-        <Player classId={activeClass.id} title={activeClass.name} desc={activeClass.description} author={activeClass.author} url={activeClass.url} user={userName} />
+        <Player classId={activeClass.id} title={activeClass.name} desc={activeClass.description} author={activeClass.author} url={activeClass.url} user={userName} uid={userId} />
         <Comments classId={activeClass.id} />
       </SpaceBetween>
     </>

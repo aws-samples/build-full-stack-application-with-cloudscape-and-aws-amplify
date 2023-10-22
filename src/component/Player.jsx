@@ -13,12 +13,12 @@ import {
   createProfile, updateProfile
 } from '../graphql/mutations';
 import {
-  listRewards, listProfiles
+  listRewards, listProfiles, getProfile
 } from '../graphql/queries';
 
 // components
-import { format } from './Duration'
-import { Survey } from './Survey'
+import { format } from './Duration';
+import { Survey } from './Survey';
 
 export function Player(props) {
   const [playtime, setPlaytime] = useState(0);
@@ -30,18 +30,23 @@ export function Player(props) {
           className='react-player'
           url={props.url}
           width='100%'
-          loop={true}
+          loop={false}
           playing={true}
           muted={true}
           controls={true}
           light={false}
           pip={false}
+          onEnded={ () => {
+              updateRewardApi(props.user, props.classId, true, 20);
+            }
+          }
           onDuration={ (e) => {console.log(e)} }
           onProgress={ (e) => {
               var checkpoint = playtime + 10;
               if (e.playedSeconds > checkpoint) {
                 console.log("checkpoint: " + e.playedSeconds);
                 updateRewardApi(props.user, props.classId, checkpoint);
+                updateProfileRewardApi(props.uid, props.user);
                 setPlaytime(checkpoint);
               }
               console.log(e.playedSeconds);
@@ -64,13 +69,21 @@ export function Player(props) {
 }
 
 // graphql apis
-function fetchProfilesApi(user) {
+function updateProfileRewardApi(id, user, point = 10) {
   try {
-    return API.graphql(graphqlOperation(listProfiles, {
-      filter: { userId: { eq: user }}
-    })).then(
-      result => {
-        return result.data.listProfiles.items;
+    API.graphql(graphqlOperation(getProfile, { id: id })).then(
+      (result) => {
+        if (result.data.getProfile == null) {
+          API.graphql(graphqlOperation(createProfile, {
+            input: { id: id, userId: user, point: point }
+          }));
+        }
+        else {
+          var item = result.data.getProfile;
+          API.graphql(graphqlOperation(updateProfile, {
+            input: { id: item.id, _version: item._version, point: (point + item.point) }
+          }));
+        }
     });
   }
   catch (e) {
@@ -78,47 +91,10 @@ function fetchProfilesApi(user) {
   }
 }
 
-function updateProfileRewardApi(id, _version, user, point = 10) {
-  try {
-    var result = fetchProfilesApi(user);
-
-    if (result.data.listProfiles.length > 0 && result.data.listProfiles) {
-      API.graphql(graphqlOperation(updateProfile, {
-        input: { id: id, _version: _version, userId: user, point: point }
-      }));
-    }
-    else {
-      API.graphql(graphqlOperation(createProfile, {
-        input: { userId: user, point: point }
-      }));
-    }
-  }
-  catch (e) {
-    console.log({e});
-  }
-}
-
-function fetchRewardsApi(user, classId) {
-  try {
-    return API.graphql(graphqlOperation(listRewards, {
-      filter: { and: {
-        classId: { eq: classId },
-        userId: { eq: user }
-      }}
-    })).then(
-      result => {
-        return result.data.listRewards.items;
-    });
-  }
-  catch (e) {
-    console.log({e});
-  }
-}
-
-function updateRewardApi(user, classId, played, duration = 0, point = 10) {
+function updateRewardApi(user, classId, played, complete = false, point = 10) {
   try {
     API.graphql(graphqlOperation(createReward, {
-      input: { userId: user, classId: classId, duration: duration, played: played, point: point }
+      input: { userId: user, classId: classId, completion: complete, played: played, point: point }
     }));
   }
   catch (e) {

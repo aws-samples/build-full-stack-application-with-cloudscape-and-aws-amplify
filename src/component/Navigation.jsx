@@ -1,6 +1,8 @@
 // ui
 import React, { useState } from "react";
 import { SideNavigation, TopNavigation } from "@cloudscape-design/components";
+
+// components
 import { Auth } from 'aws-amplify';
 
 export function NavigationBar ({activeHref, setActiveHref}) {

@@ -123,7 +123,7 @@ export const getReward = /* GraphQL */ `
       id
       classId
       userId
-      duration
+      completion
       played
       point
       createdAt
@@ -144,7 +144,7 @@ export const listRewards = /* GraphQL */ `
         id
         classId
         userId
-        duration
+        completion
         played
         point
         createdAt
@@ -158,7 +158,7 @@ export const listRewards = /* GraphQL */ `
   }
 `;
 export const getProfile = /* GraphQL */ `
-  query GetProfile($id: ID!) {
+  query GetProfile($id: String!) {
     getProfile(id: $id) {
       id
       point
@@ -174,11 +174,19 @@ export const getProfile = /* GraphQL */ `
 `;
 export const listProfiles = /* GraphQL */ `
   query ListProfiles(
+    $id: String
     $filter: ModelProfileFilterInput
     $limit: Int
     $nextToken: String
+    $sortDirection: ModelSortDirection
   ) {
-    listProfiles(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listProfiles(
+      id: $id
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+      sortDirection: $sortDirection
+    ) {
       items {
         id
         point

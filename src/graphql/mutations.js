@@ -187,7 +187,7 @@ export const createReward = /* GraphQL */ `
       id
       classId
       userId
-      duration
+      completion
       played
       point
       createdAt
@@ -206,7 +206,7 @@ export const updateReward = /* GraphQL */ `
       id
       classId
       userId
-      duration
+      completion
       played
       point
       createdAt
@@ -225,7 +225,7 @@ export const deleteReward = /* GraphQL */ `
       id
       classId
       userId
-      duration
+      completion
       played
       point
       createdAt
