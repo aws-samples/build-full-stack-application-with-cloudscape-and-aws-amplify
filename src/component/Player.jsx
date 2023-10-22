@@ -44,12 +44,10 @@ export function Player(props) {
           onProgress={ (e) => {
               var checkpoint = playtime + 10;
               if (e.playedSeconds > checkpoint) {
-                console.log("checkpoint: " + e.playedSeconds);
                 updateRewardApi(props.user, props.classId, checkpoint);
                 updateProfileRewardApi(props.uid, props.user);
                 setPlaytime(checkpoint);
               }
-              console.log(e.playedSeconds);
             }
           }
           onPause={ () => {console.log("playing false, paused")} }
