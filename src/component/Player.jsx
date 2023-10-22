@@ -42,7 +42,7 @@ export function Player(props) {
           }
           onDuration={ (e) => {console.log(e)} }
           onProgress={ (e) => {
-              var checkpoint = playtime + 10;
+              var checkpoint = playtime + 30;
               if (e.playedSeconds > checkpoint) {
                 updateRewardApi(props.user, props.classId, checkpoint);
                 updateProfileRewardApi(props.uid, props.user);
