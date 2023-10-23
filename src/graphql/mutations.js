@@ -178,6 +178,57 @@ export const deleteComment = /* GraphQL */ `
     }
   }
 `;
+export const createTrack = /* GraphQL */ `
+  mutation CreateTrack(
+    $input: CreateTrackInput!
+    $condition: ModelTrackConditionInput
+  ) {
+    createTrack(input: $input, condition: $condition) {
+      classId
+      userId
+      completion
+      played
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+  }
+`;
+export const updateTrack = /* GraphQL */ `
+  mutation UpdateTrack(
+    $input: UpdateTrackInput!
+    $condition: ModelTrackConditionInput
+  ) {
+    updateTrack(input: $input, condition: $condition) {
+      classId
+      userId
+      completion
+      played
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+  }
+`;
+export const deleteTrack = /* GraphQL */ `
+  mutation DeleteTrack(
+    $input: DeleteTrackInput!
+    $condition: ModelTrackConditionInput
+  ) {
+    deleteTrack(input: $input, condition: $condition) {
+      classId
+      userId
+      completion
+      played
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+  }
+`;
 export const createReward = /* GraphQL */ `
   mutation CreateReward(
     $input: CreateRewardInput!
@@ -187,8 +238,6 @@ export const createReward = /* GraphQL */ `
       id
       classId
       userId
-      completion
-      played
       point
       createdAt
       updatedAt
@@ -206,8 +255,6 @@ export const updateReward = /* GraphQL */ `
       id
       classId
       userId
-      completion
-      played
       point
       createdAt
       updatedAt
@@ -225,8 +272,6 @@ export const deleteReward = /* GraphQL */ `
       id
       classId
       userId
-      completion
-      played
       point
       createdAt
       updatedAt

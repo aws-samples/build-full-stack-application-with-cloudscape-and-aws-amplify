@@ -160,6 +160,57 @@ export const onDeleteComment = /* GraphQL */ `
     }
   }
 `;
+export const onCreateTrack = /* GraphQL */ `
+  subscription OnCreateTrack(
+    $filter: ModelSubscriptionTrackFilterInput
+    $owner: String
+  ) {
+    onCreateTrack(filter: $filter, owner: $owner) {
+      classId
+      userId
+      completion
+      played
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+  }
+`;
+export const onUpdateTrack = /* GraphQL */ `
+  subscription OnUpdateTrack(
+    $filter: ModelSubscriptionTrackFilterInput
+    $owner: String
+  ) {
+    onUpdateTrack(filter: $filter, owner: $owner) {
+      classId
+      userId
+      completion
+      played
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+  }
+`;
+export const onDeleteTrack = /* GraphQL */ `
+  subscription OnDeleteTrack(
+    $filter: ModelSubscriptionTrackFilterInput
+    $owner: String
+  ) {
+    onDeleteTrack(filter: $filter, owner: $owner) {
+      classId
+      userId
+      completion
+      played
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+  }
+`;
 export const onCreateReward = /* GraphQL */ `
   subscription OnCreateReward(
     $filter: ModelSubscriptionRewardFilterInput
@@ -169,8 +220,6 @@ export const onCreateReward = /* GraphQL */ `
       id
       classId
       userId
-      completion
-      played
       point
       createdAt
       updatedAt
@@ -188,8 +237,6 @@ export const onUpdateReward = /* GraphQL */ `
       id
       classId
       userId
-      completion
-      played
       point
       createdAt
       updatedAt
@@ -207,8 +254,6 @@ export const onDeleteReward = /* GraphQL */ `
       id
       classId
       userId
-      completion
-      played
       point
       createdAt
       updatedAt
