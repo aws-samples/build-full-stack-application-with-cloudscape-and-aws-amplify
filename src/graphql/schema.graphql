@@ -32,12 +32,17 @@ type Comment @model @auth(rules: [{ allow: owner }, { allow: private, operations
   owners: [String]
 }
 
+type Track @model @auth(rules: [{ allow: owner }]) {
+  classId: String! @primaryKey(sortKeyFields: ["userId"])
+  userId: ID!
+  completion: Boolean
+  played: String
+}
+
 type Reward @model @auth(rules: [{ allow: owner }]) {
   id: ID!
   classId: String!
   userId: String!
-  completion: Boolean
-  played: String
   point: String
 }
 

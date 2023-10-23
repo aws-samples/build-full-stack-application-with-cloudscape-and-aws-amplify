@@ -117,14 +117,58 @@ export const listComments = /* GraphQL */ `
     }
   }
 `;
+export const getTrack = /* GraphQL */ `
+  query GetTrack($classId: String!, $userId: ID!) {
+    getTrack(classId: $classId, userId: $userId) {
+      classId
+      userId
+      completion
+      played
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+  }
+`;
+export const listTracks = /* GraphQL */ `
+  query ListTracks(
+    $classId: String
+    $userId: ModelIDKeyConditionInput
+    $filter: ModelTrackFilterInput
+    $limit: Int
+    $nextToken: String
+    $sortDirection: ModelSortDirection
+  ) {
+    listTracks(
+      classId: $classId
+      userId: $userId
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+      sortDirection: $sortDirection
+    ) {
+      items {
+        classId
+        userId
+        completion
+        played
+        createdAt
+        updatedAt
+        owner
+        __typename
+      }
+      nextToken
+      __typename
+    }
+  }
+`;
 export const getReward = /* GraphQL */ `
   query GetReward($id: ID!) {
     getReward(id: $id) {
       id
       classId
       userId
-      completion
-      played
       point
       createdAt
       updatedAt
@@ -144,8 +188,6 @@ export const listRewards = /* GraphQL */ `
         id
         classId
         userId
-        completion
-        played
         point
         createdAt
         updatedAt
