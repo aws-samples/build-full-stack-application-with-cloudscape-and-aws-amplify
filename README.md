@@ -60,11 +60,19 @@ Copy the *graphql.scheam* file under the `src/graphql` directory in your project
 cp src/graphql/schema.graphql amplify/backend/api/cloudscape-app/graphql.schema
 ```
 
-### Apply changes
-Then, update the api configuration using amplify-cli. You can see an update on your local server configuration. And apply changes on your AWS environment. Thia step will create your backend infrastructure on your AWS account such as Amazon Cognito (Auth), AWS AppSync (API), and Amazon DynamoDB (Database).
+Then, update the api configuration using amplify-cli. You can see an update on your local server configuration.
 ```
 amplify update api
 ```
+
+### Add Analytics platform
+```
+amplify add analytics
+> Amazon Pinpoint
+```
+
+### Apply changes
+And apply changes on your AWS environment. Thia step will create your backend infrastructure on your AWS account such as Amazon Cognito (Auth), AWS AppSync (API), and Amazon DynamoDB (Database).
 ```
 amplify push
 ```
