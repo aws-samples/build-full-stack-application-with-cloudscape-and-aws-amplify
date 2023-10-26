@@ -17,6 +17,7 @@ combined_output="AccessKey: $AccessKey\nSecretKey: $SecretKey"
 echo -e $combined_output > amplify_config.txt
 
 # Download the web applicaion from Gitlab
+git stash
 git checkout tags/$1
 
 # Install libraries
