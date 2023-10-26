@@ -17,10 +17,10 @@ combined_output="AccessKey: $AccessKey\nSecretKey: $SecretKey"
 echo -e $combined_output > amplify_config.txt
 
 # Download the web applicaion from Gitlab
-git clone -b $1 --depth 1 https://github.com/aws-samples/build-full-stack-application-with-cloudscape-and-aws-amplify
+git checkout tags/$1
 
 # Install libraries
-cd build-full-stack-application-with-cloudscape-and-aws-amplify
+cd ~/environment/build-full-stack-application-with-cloudscape-and-aws-amplify
 
 npm install -g @aws-amplify/cli
 sudo yum -y install xdg-utils
