@@ -1,6 +1,15 @@
 # Build a full-stack application with Cloudscape and AWS Amplify
 This is an example shows how to build rapidly a e-learning service with Cloudscape and AWS Amplify and AWS serverless services, such as AWS Cognito, AWS AppSync, Amazon DynamoDB.
 
+**Application**\
+![aws-reinvent2023-arc330-catalog](images/aws-reinvent2023-arc330-catalog.png)
+![aws-reinvent2023-arc330-player](images/aws-reinvent2023-arc330-player.png)
+
+**Analytics Dashboard**\
+![aws-reinvent2023-arc330-pinpoint-mau](images/aws-reinvent2023-arc330-pinpoint-mau.png)
+![aws-reinvent2023-arc330-pinpoint-demographic](images/aws-reinvent2023-arc330-pinpoint-demographic.png)
+
+
 ## Getting Started
 ### Clone repo
 Download example as *cloudscape-app* directory:
@@ -60,11 +69,19 @@ Copy the *graphql.scheam* file under the `src/graphql` directory in your project
 cp src/graphql/schema.graphql amplify/backend/api/cloudscape-app/graphql.schema
 ```
 
-### Apply changes
-Then, update the api configuration using amplify-cli. You can see an update on your local server configuration. And apply changes on your AWS environment. Thia step will create your backend infrastructure on your AWS account such as Amazon Cognito (Auth), AWS AppSync (API), and Amazon DynamoDB (Database).
+Then, update the api configuration using amplify-cli. You can see an update on your local server configuration.
 ```
 amplify update api
 ```
+
+### Add Analytics platform
+```
+amplify add analytics
+> Amazon Pinpoint
+```
+
+### Apply changes
+And apply changes on your AWS environment. Thia step will create your backend infrastructure on your AWS account such as Amazon Cognito (Auth), AWS AppSync (API), and Amazon DynamoDB (Database).
 ```
 amplify push
 ```
