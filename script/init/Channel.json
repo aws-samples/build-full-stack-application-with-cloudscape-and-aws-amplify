@@ -1,0 +1,7 @@
+{
+    "Channel": [
+        {"PutRequest": 
+            {"Item":{"id":{"S":"1"},"icon":{"S":"icon"},"name":{"S":"welcome"},"createdAt":{"S":"replace_time"}, "updatedAt":{"S":"replace_time"}}}
+        }
+    ]
+}

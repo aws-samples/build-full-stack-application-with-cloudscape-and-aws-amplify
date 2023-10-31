@@ -1,0 +1,13 @@
+{
+    "Comment": [
+        {"PutRequest": 
+            {"Item":{"id":{"S":"1"},"classId":{"S":"1"},"content":{"S":"welcome"},"owner":{"S":"user_name"},"createdAt":{"S":"replace_time"},"updatedAt":{"S":"replace_time"}}}
+        },
+        {"PutRequest": 
+            {"Item":{"id":{"S":"2"},"classId":{"S":"2"},"content":{"S":"welcome"},"owner":{"S":"user_name"},"createdAt":{"S":"replace_time"},"updatedAt":{"S":"replace_time"}}}
+        },
+        {"PutRequest": 
+            {"Item":{"id":{"S":"3"},"classId":{"S":"3"},"content":{"S":"welcome"},"owner":{"S":"user_name"},"createdAt":{"S":"replace_time"},"updatedAt":{"S":"replace_time"}}}
+        }
+    ]
+}

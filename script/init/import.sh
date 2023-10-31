@@ -23,18 +23,38 @@ echo "environment_name: ${environment_name}"
 #Set the each dynamodb table names
 course_name="Course-$index_name-$environment_name"
 class_name="Class-$index_name-$environment_name"
+Channel_name="Channel-$index_name-$environment_name"
+Comment_name="Comment-$index_name-$environment_name"
+Message_name="Message-$index_name-$environment_name"
 echo "course_name: ${course_name}"
 echo "class_name: ${class_name}"
+echo "Channel_name: ${Channel_name}"
+echo "Comment_name: ${Comment_name}"
+echo "Message_name: ${Message_name}"
 
 #Set the current time
 current_time=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
 
+#Set the owner name
+user_name="reinvent"
+
 #Replace the table_name
 sed -i -e "s/Course/$course_name/g" Course.json
 sed -i -e "s/Class/$class_name/g" Class.json
+sed -i -e "s/Channel/$Channel_name/g" Channel.json
+sed -i -e "s/Comment/$Comment_name/g" Comment.json
+sed -i -e "s/Message/$Message_name/g" Message.json
 sed -i -e "s/replace_time/$current_time/g" Course.json
 sed -i -e "s/replace_time/$current_time/g" Class.json
+sed -i -e "s/replace_time/$current_time/g" Channel.json
+sed -i -e "s/replace_time/$current_time/g" Comment.json
+sed -i -e "s/replace_time/$current_time/g" Message.json
+sed -i -e "s/user_name/$user_name/g" Comment.json
+sed -i -e "s/user_name/$user_name/g" Message.json
 
 #Insert the data into tables
 aws dynamodb batch-write-item --request-items file://Course.json
 aws dynamodb batch-write-item --request-items file://Class.json
+aws dynamodb batch-write-item --request-items file://Channel.json
+aws dynamodb batch-write-item --request-items file://Comment.json
+aws dynamodb batch-write-item --request-items file://Message.json
