@@ -1,7 +1,7 @@
 {
     "Channel": [
         {"PutRequest": 
-            {"Item":{"id":{"S":"1"},"icon":{"S":"icon"},"name":{"S":"welcome"},"createdAt":{"S":"replace_time"}, "updatedAt":{"S":"replace_time"}}}
+            {"Item":{"id":{"S":"8979563f-54f6-4013-8409-ae3a821630d9"},"icon":{"S":"icon"},"name":{"S":"welcome"},"createdAt":{"S":"replace_time"}, "updatedAt":{"S":"replace_time"}}}
         }
     ]
 }
