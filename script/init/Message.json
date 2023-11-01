@@ -1,7 +1,0 @@
-{
-    "Message": [
-        {"PutRequest": 
-            {"Item":{"id":{"S":"1"},"channelId":{"S":"1"},"content":{"S":"welcome"},"owner":{"S":"user_name"},"createdAt":{"S":"replace_time"}, "updatedAt":{"S":"replace_time"}}}
-        }
-    ]
-}
