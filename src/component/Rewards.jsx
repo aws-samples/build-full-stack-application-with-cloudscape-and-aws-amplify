@@ -70,7 +70,7 @@ function Rewards(user) {
     filtering: {
       empty: <TableEmptyState resourceName="Reward" />,
     },
-    pagination: { pageSize: 5 },
+    // pagination: { pageSize: 5 },
   });
 
   return (
@@ -87,7 +87,7 @@ function Rewards(user) {
           Rewards
         </Header>
       }
-      pagination={<Pagination {...paginationProps} />}
+      // pagination={<Pagination {...paginationProps} />}
     />
   );
 }
