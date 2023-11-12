@@ -25,7 +25,7 @@ export function Player(props) {
   const [played, setPlayed] = useState(0);
   const [marker, setMarker] = useState(0);
   const [duration, setDuration] = useState(0);
-  const interval = 30;
+  const interval = 5;
 
   return (
     <Container>
