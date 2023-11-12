@@ -52,6 +52,11 @@ export function Player(props) {
             setDuration(Math.floor(e));
           }}
           onProgress={ (e) => {
+            if (marker >= duration) {
+              // reset marker
+              setMarker(0);
+            }
+
             var checkpoint = marker + interval;
             setPlayed(e.playedSeconds);
 
