@@ -25,7 +25,7 @@ export function Player(props) {
   const [played, setPlayed] = useState(0);
   const [marker, setMarker] = useState(0);
   const [duration, setDuration] = useState(0);
-  const interval = 30;
+  const interval = 5;
 
   return (
     <Container>
@@ -52,6 +52,11 @@ export function Player(props) {
             setDuration(Math.floor(e));
           }}
           onProgress={ (e) => {
+            if (marker >= duration) {
+              // reset marker
+              setMarker(0);
+            }
+
             var checkpoint = marker + interval;
             setPlayed(e.playedSeconds);
 
