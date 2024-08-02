@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^4.8.0",
-    "@aws-amplify/ui-react": "^4.3.6",
+    "@aws-amplify/ui-react": "^4.6.0",
     "@cloudscape-design/components": "^3.0.367",
     "@cloudscape-design/global-styles": "^1.0.7",
     "@emotion/react": "^11.10.5",
@@ -12,7 +12,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "aws-amplify": "^5.3.12",
+    "aws-amplify": "^6.4.3",
     "bootstrap": "^5.2.3",
     "framer-motion": "^8.1.7",
     "hls.js": "^1.2.9",
