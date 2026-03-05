@@ -22,11 +22,11 @@
     "react-dom": "^18.2.0",
     "react-markdown": "^10.1.0",
     "react-player": "^2.16.0",
-    "react-router-dom": "^6.22.0"
+    "react-router-dom": "^7.13.1"
   },
   "devDependencies": {
-    "@aws-amplify/backend": "^1.18.0",
-    "@aws-amplify/backend-cli": "^1.8.0",
+    "@aws-amplify/backend": "^1.16.1",
+    "@aws-amplify/backend-cli": "^1.7.2",
     "@aws-sdk/client-bedrock-agent-runtime": "^3.911.0",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
@@ -34,8 +34,8 @@
     "@typescript-eslint/parser": "^7.2.0",
     "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.4.17",
-    "aws-cdk": "^2.177.0",
-    "aws-cdk-lib": "^2.216.0",
+    "aws-cdk": "^2.1109.0",
+    "aws-cdk-lib": "^2.241.0",
     "constructs": "^10.4.3",
     "esbuild": "^0.25.12",
     "eslint": "^8.57.0",
@@ -45,6 +45,14 @@
     "sass": "^1.70.0",
     "tsx": "^4.20.6",
     "typescript": "^5.9.3",
-    "vite": "^5.4.11"
+    "vite": "^7.3.1"
+  },
+  "overrides": {
+    "fast-xml-parser": ">=4.5.3",
+    "minimatch": ">=9.0.5",
+    "@isaacs/brace-expansion": ">=3.0.0",
+    "basic-ftp": ">=5.0.5",
+    "immutable": ">=5.0.3",
+    "lodash": ">=4.17.21"
   }
 }
